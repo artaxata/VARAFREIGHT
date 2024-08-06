@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARA Distribution - Your Trusted Wholesale Partner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00264d;
+            --secondary-color: #0044cc;
+            --text-color: #333;
+            --bg-color: #f8f8f8;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        header.scrolled {
+            background-color: rgba(0, 38, 77, 0.9);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #b3d9ff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 0;
+            padding: 40px 20px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-item {
+            background-color: #f1f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .contact-info p, .contact-info a {
+            color: var(--primary-color);
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #003399;
+        }
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            height: 150px;
+        }
+        .submit-button {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #003399;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>VARA Distribution</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home" class="container section">
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Distribution Center" class="hero-image">
+        <h2>Welcome to VARA Distribution</h2>
+        <p>Your trusted partner in wholesale and distribution. We offer a wide range of products and services to meet all your business needs. Discover how we can help you streamline your supply chain and maximize efficiency.</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+
+    <div id="services" class="container section">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Distribution Service">
+                <h3>Distribution</h3>
+                <p>We provide reliable distribution solutions to ensure your products reach the market on time and in perfect condition.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wholesale Service">
+                <h3>Wholesale</h3>
+                <p>Our wholesale services offer competitive pricing and flexible terms to help you achieve your business goals.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1484972759836-b93f9ef2b293?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Logistics Management">
+                <h3>Logistics Management</h3>
+                <p>We handle all aspects of logistics management, from warehousing to transportation, so you can focus on growing your business.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="container section">
+        <h2>About Us</h2>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our Team" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+        <p>VARA Distribution has been a leader in the distribution and wholesale industry for over a decade. Our experienced team is dedicated to providing exceptional service and innovative solutions to help our clients succeed. We pride ourselves on our commitment to reliability, efficiency, and customer satisfaction.</p>
+    </div>
+
+    <div id="contact" class="container section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need more information about our services, please feel free to reach out to us:</p>
+        <p>Email: <a href="mailto:info@varadistribution.com">info@varadistribution.com</a></p>
+        <p>Phone: +1 (555) 123-4567</p>
+        <p>Address: 123 Business Rd, Suite 456, Cityville, ST, 78910</p>
+        
+        <form class="contact-form" action="send_email.php" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VARA Distribution. All rights reserved.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
